@@ -1,6 +1,6 @@
 [README.md](https://github.com/user-attachments/files/33277133/README.md)
 
-Problem statement:
+**Problem statement:**
 To develop a Python-based data analysis system that cleans and explores predictive maintenance data and visualizes machine operating parameters to identify trends, relationships, and potential equipment abnormalities.
 # Python data-analysis project
 
