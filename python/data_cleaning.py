@@ -1,4 +1,4 @@
-"""Clean the predictive-maintenance dataset."""
+"""Clean the raw dataset."""
 
 import pandas as pd
 
@@ -28,7 +28,7 @@ def clean_data(df):
     return df
 
 
-def save_cleaned_data(df, output_path="predictive-maintenance-cleaned.csv"):
+def save_cleaned_data(df, output_path="cleaned_dataset.csv"):
     """Save the cleaned dataset to CSV."""
     df.to_csv(output_path, index=False)
     print(f"\nCleaned dataset saved to: {output_path}")
