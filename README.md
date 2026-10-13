@@ -2,47 +2,59 @@
 
 ## 📌 Project Overview
 
-Predictive Maintenance Data Analysis Using Python is a data analysis project designed to process, clean, explore, and visualize machine-related sensor data. The project focuses on analyzing parameters such as ball-bearing measurements, humidity, and vibration to understand data distributions, identify trends, examine relationships between variables, and investigate potentially abnormal operating patterns.
+**Predictive Maintenance Data Analysis Using Python** is a data analysis project that focuses on processing, cleaning, exploring, and visualizing machine-related sensor data. The project analyzes parameters such as ball-bearing measurements, humidity, and vibration to understand data distributions, identify trends, and investigate relationships between variables.
 
-The project implements a modular data analysis workflow using Python and libraries such as Pandas, Matplotlib, and Seaborn. It automates the major stages of data analysis, from loading the raw dataset to generating meaningful visualizations. All generated graphs are automatically stored in a dedicated `Visualization` folder, making the results easy to access and review.
+The project uses Python libraries such as Pandas, Matplotlib, and Seaborn to perform data preprocessing, exploratory data analysis (EDA), and visualization. It follows a modular structure in which each Python file is responsible for a specific stage of the workflow.
+
+A Jupyter Notebook is also included to demonstrate the complete analysis interactively. All generated graphs are organized in a dedicated `Visualization` folder.
 
 ## 🎯 Problem Statement
 
 To develop a Python-based data analysis system that cleans predictive maintenance sensor data and visualizes distributions, trends, categories, and relationships to support the investigation of potentially abnormal machine operating patterns.
 
-## 🎯 Project Objectives
+## 🎯 Objectives
 
-- Load and process the predictive maintenance dataset using Python.
-- Identify and handle missing values, duplicate records, and invalid numeric entries.
-- Perform exploratory data analysis to understand the dataset's structure and statistical characteristics.
-- Analyze ball-bearing measurements, humidity, and vibration patterns.
-- Generate visualizations to examine distributions, trends, correlations, and value categories.
-- Automate the complete data analysis workflow through a single execution file.
-- Save the cleaned dataset and generated graphs for further analysis and reporting.
+- Load and process raw sensor data using Python.
+- Identify and handle missing values, duplicate records, and invalid numeric values.
+- Perform exploratory data analysis to understand the dataset's characteristics.
+- Analyze ball-bearing measurements, humidity, and vibration.
+- Generate visualizations to identify trends, distributions, and correlations.
+- Automate data processing through modular Python scripts.
+- Store the cleaned dataset and visualization outputs in organized folders.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Pandas | Data loading, manipulation, cleaning, and statistical analysis |
-| Matplotlib | Creating line charts and scatter plots |
-| Seaborn | Creating distribution plots and correlation heatmaps |
-| OS module | Creating directories and managing output file paths |
-| Jupyter Notebook | Interactive development and analysis |
+| Pandas | Data loading, cleaning, manipulation, and statistical analysis |
+| Matplotlib | Line charts, scatter plots, and other visualizations |
+| Seaborn | Distribution plots and correlation heatmaps |
+| OS module | Directory creation and file path management |
+| Jupyter Notebook | Interactive analysis and code execution |
 
 ## 📂 Project Structure
 
 ```text
-Python/
-├── main.py
-├── data_loading.py
-├── data_cleaning.py
-├── exploratory_analysis.py
-├── data_visualization.py
+Data-Analysis-Python-Project/
+│
 ├── README.md
-├── predictive-maintenance-dataset.csv
-├── predictive-maintenance-cleaned.csv
+│
+├── Dataset/
+│   ├── raw_dataset.csv
+│   ├── cleaned_dataset.csv
+│   └── temp.txt
+│
+├── Notebook/
+│   ├── Data-Analysis-Python-Project_with_visualizations.ipynb
+│   └── temp.txt
+│
+├── Python/
+│   ├── data_loading.py
+│   ├── data_cleaning.py
+│   ├── exploratory_analysis.py
+│   └── data_visualization.py
+│
 └── Visualization/
     ├── ball_bearing_trend.png
     ├── humidity_trend.png
@@ -56,183 +68,220 @@ Python/
     └── class_balance_analysis.png
 ```
 
-*Note: The CSV files and visualization images are generated or supplied at runtime. They may not exist in a fresh checkout until the project is executed.*
+**Folder descriptions:**
 
-## ⚙️ Project Workflow
+- **Dataset/** — Contains the original dataset, cleaned dataset, and supporting files.
+- **Notebook/** — Contains the Jupyter Notebook with the data analysis and visualization workflow.
+- **Python/** — Contains the individual Python modules for loading, cleaning, exploratory analysis, and visualization.
+- **Visualization/** — Stores the generated graphs as PNG files.
+- **README.md** — Documents the project, setup instructions, workflow, and outputs.
 
-The project follows a structured data analysis pipeline.
+*Note: `temp.txt` files are optional placeholders. Git does not track empty directories, so these files are only necessary if you want to preserve otherwise empty folders.*
+
+## 🔄 Project Workflow
 
 ### 1. Data Loading
 
-The source CSV dataset is imported using Pandas. Initial records, column information, and data types are inspected to understand the dataset before processing.
+The raw dataset is loaded into a Pandas DataFrame. The initial records, column names, data types, and dataset structure are inspected.
 
 ### 2. Data Cleaning
 
-The data cleaning stage performs the following operations:
+The data cleaning stage:
 
-- Checks for missing values.
-- Identifies and removes duplicate records.
-- Converts the ball-bearing, humidity, and vibration columns into numeric format.
-- Handles invalid numeric values by converting them into missing values.
+- Identifies missing values.
+- Detects and removes duplicate records.
+- Converts the ball-bearing, humidity, and vibration columns to numeric data types.
+- Converts invalid numeric entries into missing values.
 - Removes rows containing missing values.
-- Saves the cleaned dataset for subsequent analysis.
+- Saves the cleaned dataset for further analysis.
 
 ### 3. Exploratory Data Analysis
 
-Exploratory data analysis is used to understand the characteristics of the cleaned dataset. It includes:
+Exploratory data analysis examines the cleaned dataset using:
 
-- Examining dataset dimensions and column names.
-- Inspecting data types.
-- Calculating descriptive statistics.
-- Reviewing missing-value counts.
-- Studying relationships between numeric variables.
+- Dataset dimensions and column information.
+- Data type inspection.
+- Descriptive statistics.
+- Missing-value checks.
+- Correlation analysis between numeric variables.
 
 ### 4. Data Visualization
 
-The project generates ten visualizations to support the interpretation of the dataset.
+The project generates graphs to examine sensor trends, variable relationships, distributions, category counts, and correlations.
 
-### 5. Automated Execution
+### 5. Output Storage
 
-The `main.py` file acts as the main entry point and connects the individual Python modules. Running this file executes the data loading, cleaning, exploratory analysis, and visualization stages in sequence.
+The cleaned dataset is stored in `Dataset/cleaned_dataset.csv`, and the visualization images are stored in the `Visualization/` folder.
+
+The visualization directory can be created automatically by the Python code if it does not already exist.
 
 ## 📊 Visualizations
 
-The project generates the following graphs.
+The project includes ten visualizations.
 
-### Existing Visualizations
+### Existing Graphs
 
 **1. Ball-Bearing Trend Analysis**
 
-Displays ball-bearing measurements across observations to help identify changes, variations, and unusual values.
+Displays ball-bearing measurements across observations to identify changes and variations.
 
 **2. Humidity Trend Analysis**
 
-Shows the variation in humidity measurements across the dataset.
+Shows changes in humidity measurements across the dataset.
 
 **3. Vibration Trend Analysis**
 
-Displays vibration values across observations to help examine fluctuations and potentially unusual patterns.
+Displays vibration measurements across observations to help identify fluctuations and potentially unusual patterns.
 
 **4. Ball-Bearing vs. Vibration**
 
-A scatter plot used to investigate the relationship between ball-bearing measurements and vibration.
+A scatter plot used to explore the relationship between ball-bearing measurements and vibration.
 
 **5. Humidity vs. Vibration**
 
-A scatter plot used to examine whether humidity and vibration exhibit any observable relationship.
+A scatter plot used to investigate the relationship between humidity and vibration.
 
-### Additional Visualizations
+### Additional Graphs
 
 **6. Distribution Analysis**
 
-Histograms illustrate the distributions of numeric variables, helping reveal their spread, concentration, and potential extreme values.
+Uses histograms to examine the distribution, spread, and concentration of numeric sensor values.
 
 **7. Category Analysis**
 
-Groups numeric measurements into categories such as Low, Medium, and High to compare the number of observations in each range.
+Groups numeric measurements into Low, Medium, and High ranges to compare the number of observations in each category.
 
 **8. Trend Analysis**
 
-Displays multiple sensor variables together to provide an overall view of how their values vary across observations.
+Displays multiple sensor variables together to compare their variations across observations.
 
 **9. Correlation Analysis**
 
-A correlation heatmap summarizes the linear relationships between numeric variables and helps identify positive or negative associations.
+Uses a correlation heatmap to visualize the direction and strength of linear relationships between numeric variables.
 
 **10. Class Balance Analysis**
 
-Displays the distribution of derived vibration categories to show how observations are distributed among the defined groups.
+Displays the distribution of derived vibration categories. These categories are used for exploratory analysis and are not verified machine-failure labels.
 
-All graphs are saved as PNG images inside the `Visualization` folder. The code creates this folder automatically if it does not already exist.
-
-## 🚀 Installation and Setup
+## ⚙️ Installation and Setup
 
 ### Prerequisites
 
 - Python 3.9 or later recommended
 - pip package manager
 - Git
-- A compatible Python editor, such as VS Code, or Jupyter Notebook
+- Visual Studio Code or Jupyter Notebook
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
+git clone <your-github-repository-url>
+cd Data-Analysis-Python-Project
 ```
 
-Replace the placeholders with your actual GitHub repository URL and folder name.
+Replace the placeholder with your actual GitHub repository URL.
 
 ### Step 2: Install Dependencies
 
 ```bash
-pip install pandas matplotlib seaborn
+pip install pandas matplotlib seaborn jupyter
 ```
 
-### Step 3: Add the Dataset
+### Step 3: Check the Dataset Path
 
-Place the source dataset in the project directory and ensure its filename and path match the values specified in the code.
+Ensure that `raw_dataset.csv` is available inside the `Dataset/` directory.
 
-The original data-loading implementation uses a semicolon (`;`) as the CSV separator. If your dataset uses commas, update the separator accordingly.
+Update the file paths in the Python scripts or notebook if necessary.
 
-### Step 4: Run the Project
+If the dataset uses semicolons as separators, use:
 
-From the project directory, execute:
+```python
+pd.read_csv("Dataset/raw_dataset.csv", sep=";")
+```
+
+If it uses commas, use the default CSV separator instead.
+
+### Step 4: Run the Jupyter Notebook
+
+Launch Jupyter Notebook:
 
 ```bash
-python main.py
+jupyter notebook
 ```
 
-The program will load the dataset, clean the data, perform exploratory analysis, generate the visualizations, and save the outputs.
+Open:
+
+```text
+Notebook/Data-Analysis-Python-Project_with_visualizations.ipynb
+```
+
+Execute the cells sequentially.
+
+### Step 5: Run the Python Modules
+
+The Python directory contains separate modules for each operation. Run the relevant scripts from the project root using:
+
+```bash
+python Python/data_loading.py
+python Python/data_cleaning.py
+python Python/exploratory_analysis.py
+python Python/data_visualization.py
+```
+
+If the scripts use relative paths, run them from the project root or adjust the paths to match the project structure.
+
+**Note:** The four-module structure above does not include a `main.py` file. To execute all four modules through a single command, add a `main.py` entry point that imports and calls their functions in the correct order.
 
 ## 📈 Expected Outputs
 
 After successful execution, the project produces:
 
-- A cleaned CSV dataset.
-- Console output containing data information and descriptive statistics.
-- Five existing graphs showing trends and relationships.
-- Five additional graphs covering distributions, categories, combined trends, correlations, and derived vibration classes.
-- A `Visualization` folder containing the generated PNG files.
+- A cleaned dataset stored in the `Dataset/` directory.
+- Console output showing data information and descriptive statistics.
+- Five graphs showing individual trends and variable relationships.
+- Five additional graphs showing distributions, categories, combined trends, correlations, and derived vibration groups.
+- A `Visualization/` directory containing the saved PNG images.
 
 ## 💡 Applications
 
-This project can support:
+This project can be used for:
 
-- Initial analysis of industrial sensor datasets.
-- Exploratory analysis of equipment operating parameters.
-- Identification of unusual patterns for further investigation.
-- Visualization of relationships between machine-related variables.
-- Preparation of data for future machine learning and predictive maintenance research.
-
-## 🔮 Future Enhancements
-
-Potential extensions include:
-
-- Developing machine learning models for equipment fault prediction using labelled historical data.
-- Comparing classification and regression algorithms where appropriate.
-- Implementing anomaly detection techniques.
-- Establishing domain-validated thresholds for abnormal operating conditions.
-- Adding interactive dashboards for exploring sensor data.
-- Integrating time-stamped data for temporal analysis.
-- Evaluating model performance using suitable metrics and independent test data.
+- Exploratory analysis of industrial sensor datasets.
+- Understanding machine-related operating parameters.
+- Investigating unusual patterns in sensor measurements.
+- Studying relationships between different operating variables.
+- Preparing data for future machine learning and predictive maintenance research.
 
 ## ⚠️ Limitations
 
-This project currently focuses on data cleaning, exploratory analysis, and visualization. It does not train or validate a machine learning model for predicting equipment failure.
+- The current project focuses on data cleaning, exploratory analysis, and visualization.
+- It does not currently train or validate a machine learning model for equipment failure prediction.
+- Low, Medium, and High vibration categories are derived for analysis and should not be interpreted as verified machine health labels.
+- Correlation does not establish causation.
+- Identifying actual equipment faults requires suitable labelled data, validated thresholds, and domain-specific evaluation.
 
-The Low, Medium, and High vibration categories are derived for analysis and should not be interpreted as verified machine health or failure labels. Similarly, correlations and visual patterns do not independently establish causation or confirm equipment faults.
+## 🔮 Future Enhancements
 
-## 👨‍💻 Conclusion
+- Integrate machine learning models for equipment fault prediction using labelled datasets.
+- Implement anomaly detection techniques.
+- Compare machine learning algorithms using appropriate evaluation metrics.
+- Add interactive dashboards for real-time or historical sensor data exploration.
+- Incorporate timestamp-based analysis.
+- Develop validated warning thresholds based on equipment specifications.
+- Automate reporting and visualization generation.
 
-Predictive Maintenance Data Analysis Using Python provides a structured and automated approach to preparing, exploring, and visualizing machine-related sensor data. By combining data cleaning, descriptive statistics, and multiple visualization techniques, the project makes it easier to understand the dataset and identify patterns that may warrant further investigation.
+## 🏁 Conclusion
 
-The modular design and automated execution workflow also provide a foundation for extending the project with advanced analytics, anomaly detection, and validated machine learning models in the future.
+Predictive Maintenance Data Analysis Using Python provides a structured workflow for loading, cleaning, exploring, and visualizing machine-related sensor data. By organizing the project into separate modules, a Jupyter Notebook, a dataset directory, and a visualization directory, it supports reproducible analysis and clear presentation of results.
+
+The project also provides a foundation for future enhancements involving anomaly detection, advanced analytics, and validated machine learning models.
 
 ---
 
-**Project Category:** Data Analysis / Predictive Maintenance
+**Project Type:** Data Analysis and Visualization
 
-**Primary Language:** Python
+**Programming Language:** Python
 
-**Key Libraries:** Pandas, Matplotlib, Seaborn
+**Libraries:** Pandas, Matplotlib, Seaborn
+
+**Domain:** Predictive Maintenance and Industrial Sensor Data Analysis
