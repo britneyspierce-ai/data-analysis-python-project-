@@ -1,10 +1,10 @@
-"""Load the predictive-maintenance dataset."""
+"""Load the raw dataset."""
 
 from pathlib import Path
 import pandas as pd
 
 
-def load_data(file_path="predictive-maintenance-dataset.csv", sep=";"):
+def load_data(file_path="raw_dataset.csv", sep=";"):
     """Load a CSV dataset and display a quick preview."""
     path = Path(file_path)
     if not path.exists():
