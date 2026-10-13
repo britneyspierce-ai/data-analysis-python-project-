@@ -39,7 +39,7 @@ python main.py
 
 `main.py` executes the workflow in order:
 1. Load the dataset
-2. Clean the dataset and save `predictive-maintenance-cleaned.csv`
+2. Clean the dataset and save `cleaned_dataset.csv`
 3. Perform exploratory data analysis
 4. Generate visualizations
 
