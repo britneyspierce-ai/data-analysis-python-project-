@@ -27,7 +27,7 @@ Python/
 pip install pandas matplotlib
 ```
 
-Place `raw_dataset.csv` in this folder. The loader uses `sep=";"`, matching the supplied notebook.
+Place `predictive-maintenance-dataset.csv` in this folder. The loader uses `sep=";"`, matching the supplied notebook.
 
 ## Run the whole project
 
@@ -39,8 +39,14 @@ python main.py
 
 `main.py` executes the workflow in order:
 1. Load the dataset
-2. Clean the dataset and save `cleaned_dataset.csv`
+2. Clean the dataset and save `predictive-maintenance-cleaned.csv`
 3. Perform exploratory data analysis
 4. Generate visualizations
 
 You can still run the individual modules separately if needed.
+
+
+## Visualization output
+
+Running `python main.py` creates a `Visualization/` folder automatically and saves all existing plots plus these additional plots: `distribution_analysis.png`, `category_analysis.png`, `trend_analysis.png`, `correlation_analysis.png`, and `class_balance_analysis.png`. If a graph cannot be meaningfully calculated because the dataset lacks the required column types, a labelled placeholder image is saved so all requested filenames are present.
+
