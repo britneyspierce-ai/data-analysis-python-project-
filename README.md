@@ -27,7 +27,7 @@ Python/
 pip install pandas matplotlib
 ```
 
-Place `predictive-maintenance-dataset.csv` in this folder. The loader uses `sep=";"`, matching the supplied notebook.
+Place `raw_dataset.csv` in this folder. The loader uses `sep=";"`, matching the supplied notebook.
 
 ## Run the whole project
 
