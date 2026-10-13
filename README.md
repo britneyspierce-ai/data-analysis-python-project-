@@ -27,11 +27,17 @@ To develop a Python-based data analysis system that cleans predictive maintenanc
 **Technologies Used**
 
 Technology-- Purpose
+
 Python-- Core programming language
+
 Pandas-- Data loading, manipulation, cleaning, and statistical analysis
+
 Matplotlib-- Creating line charts and scatter plots
+
 Seaborn-- Creating distribution plots and correlation heatmaps
+
 OS module-- Creating directories and managing output file paths
+
 Jupyter Notebook-- Interactive development and analysis
 
 **Project Structure**
