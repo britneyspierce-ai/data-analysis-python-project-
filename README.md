@@ -114,11 +114,11 @@ Shows the variation in humidity measurements across the dataset.
 
 Displays vibration values across observations to help examine fluctuations and potentially unusual patterns.
 
-**4. Ball-Bearing vs. Vibration**
+**4. Ball-Bearing vs Vibration**
 
 A scatter plot used to investigate the relationship between ball-bearing measurements and vibration.
 
-**5. Humidity vs. Vibration**
+**5. Humidity vs Vibration**
 
 A scatter plot used to examine whether humidity and vibration exhibit any observable relationship.
 
