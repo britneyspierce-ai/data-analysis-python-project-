@@ -1,6 +1,6 @@
 # Predictive Maintenance Data Analysis Using Python
 
-## 📌 Project Overview
+## Project Overview
 
 **Predictive Maintenance Data Analysis Using Python** is a data analysis project that focuses on processing, cleaning, exploring, and visualizing machine-related sensor data. The project analyzes parameters such as ball-bearing measurements, humidity, and vibration to understand data distributions, identify trends, and investigate relationships between variables.
 
@@ -8,11 +8,11 @@ The project uses Python libraries such as Pandas, Matplotlib, and Seaborn to per
 
 A Jupyter Notebook is also included to demonstrate the complete analysis interactively. All generated graphs are organized in a dedicated `Visualization` folder.
 
-## 🎯 Problem Statement
+## Problem Statement
 
 To develop a Python-based data analysis system that cleans predictive maintenance sensor data and visualizes distributions, trends, categories, and relationships to support the investigation of potentially abnormal machine operating patterns.
 
-## 🎯 Objectives
+## Objectives
 
 - Load and process raw sensor data using Python.
 - Identify and handle missing values, duplicate records, and invalid numeric values.
@@ -22,7 +22,7 @@ To develop a Python-based data analysis system that cleans predictive maintenanc
 - Automate data processing through modular Python scripts.
 - Store the cleaned dataset and visualization outputs in organized folders.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |---|---|
@@ -33,7 +33,7 @@ To develop a Python-based data analysis system that cleans predictive maintenanc
 | OS module | Directory creation and file path management |
 | Jupyter Notebook | Interactive analysis and code execution |
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Data-Analysis-Python-Project/
@@ -78,7 +78,7 @@ Data-Analysis-Python-Project/
 
 *Note: `temp.txt` files are optional placeholders. Git does not track empty directories, so these files are only necessary if you want to preserve otherwise empty folders.*
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ### 1. Data Loading
 
@@ -115,7 +115,7 @@ The cleaned dataset is stored in `Dataset/cleaned_dataset.csv`, and the visualiz
 
 The visualization directory can be created automatically by the Python code if it does not already exist.
 
-## 📊 Visualizations
+## Visualizations
 
 The project includes ten visualizations.
 
@@ -163,7 +163,7 @@ Uses a correlation heatmap to visualize the direction and strength of linear rel
 
 Displays the distribution of derived vibration categories. These categories are used for exploratory analysis and are not verified machine-failure labels.
 
-## ⚙️ Installation and Setup
+## Installation and Setup
 
 ### Prerequisites
 
@@ -232,7 +232,7 @@ If the scripts use relative paths, run them from the project root or adjust the 
 
 **Note:** The four-module structure above does not include a `main.py` file. To execute all four modules through a single command, add a `main.py` entry point that imports and calls their functions in the correct order.
 
-## 📈 Expected Outputs
+## Expected Outputs
 
 After successful execution, the project produces:
 
@@ -242,7 +242,7 @@ After successful execution, the project produces:
 - Five additional graphs showing distributions, categories, combined trends, correlations, and derived vibration groups.
 - A `Visualization/` directory containing the saved PNG images.
 
-## 💡 Applications
+## Applications
 
 This project can be used for:
 
@@ -252,7 +252,7 @@ This project can be used for:
 - Studying relationships between different operating variables.
 - Preparing data for future machine learning and predictive maintenance research.
 
-## ⚠️ Limitations
+## Limitations
 
 - The current project focuses on data cleaning, exploratory analysis, and visualization.
 - It does not currently train or validate a machine learning model for equipment failure prediction.
@@ -260,7 +260,7 @@ This project can be used for:
 - Correlation does not establish causation.
 - Identifying actual equipment faults requires suitable labelled data, validated thresholds, and domain-specific evaluation.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Integrate machine learning models for equipment fault prediction using labelled datasets.
 - Implement anomaly detection techniques.
@@ -270,7 +270,7 @@ This project can be used for:
 - Develop validated warning thresholds based on equipment specifications.
 - Automate reporting and visualization generation.
 
-## 🏁 Conclusion
+## Conclusion
 
 Predictive Maintenance Data Analysis Using Python provides a structured workflow for loading, cleaning, exploring, and visualizing machine-related sensor data. By organizing the project into separate modules, a Jupyter Notebook, a dataset directory, and a visualization directory, it supports reproducible analysis and clear presentation of results.
 
